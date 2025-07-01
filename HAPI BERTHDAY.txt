@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interactive Website Letter</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .envelope {
+      width: 320px;
+      height: 200px;
+      background: #e0d8c3;
+      position: relative;
+      margin: 0 auto;
+      border: 2px solid #aaa;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: height 0.5s ease;
+    }
+
+    .letter {
+      display: none;
+      background: #fff;
+      padding: 20px;
+      box-sizing: border-box;
+      height: 300px;
+      overflow-y: auto;
+      border-top: 2px solid #aaa;
+    }
+
+    .open .letter {
+      display: block;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #5d8aa8;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .button:hover {
+      background: #497b95;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div id="envelope" class="envelope">
+      <div class="letter" id="letterContent">
+        <h2>Dear Reader,</h2>
+        <p>This is a sample interactive letter written on a website. You can customize this text with your message or announcement.</p>
+        <p>Feel free to use this layout for love letters, invites, anno
